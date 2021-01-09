@@ -98,3 +98,57 @@ colnames(stock.matrix) <- days
 rownames(stock.matrix) <- st.names
 
 print(stock.matrix)
+
+mat <- matrix(1:25, byrow = T, nrow = 5)
+print(mat)
+
+print(mat * 2)
+print(mat / 2)
+print(mat ^ 2)
+
+print(mat > 15)
+print(mat[mat>15])
+
+print(mat + mat)
+
+goog <- c(450, 451, 452, 445, 468)
+msft <- c(230, 231, 232, 233, 220)
+stocks <- c(goog, msft)
+print(stocks)
+
+stock.matrix = matrix(stocks, byrow = T, nrow = 2)
+days <- c('Mon', 'Tue', 'Wed', 'Thu', 'Fri')
+st.names <- c('GOOG', 'MSFT')
+colnames(stock.matrix) <- days
+rownames(stock.matrix) <- st.names
+
+print(stock.matrix)
+print(colSums(stock.matrix))
+print(rowSums(stock.matrix))
+
+print(rowMeans(stock.matrix))
+
+FB <-  c(111, 112, 113, 120, 145)
+tech.stocks <- rbind(stock.matrix, FB)
+print(tech.stocks)
+
+avg <- rowMeans(tech.stocks)
+print(avg)
+
+tech.stocks <- cbind(tech.stocks, avg)
+print(tech.stocks)
+
+#Matrix Selection & Indexing
+
+mat <- matrix(1:50, byrow = T, nrow = 5)
+print(mat)
+print(mat[4,6])
+print(mat[1,])
+print(mat[1:3,])
+print(mat[1:2,1:3])
+print(mat[,9:10])
+print(mat[2:3, 5:6])
+print(mat[4:5, 3:5])
+
+
+
